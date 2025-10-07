@@ -6,6 +6,10 @@
   <title>Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple-touch-icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -13,7 +17,14 @@
   <header class="main-header">
     <div class="container">
       <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo main-header__logo--text" src="./images/logo-text-cat-energy.svg" width="101" height="18" alt="супер-кот"><span class="visually-hidden">Логотип супер-кот</span>
+        <span class="logo__image">
+          <picture>
+            <source type="image/svg+xml" media="(min-width:1440px)" srcset="images/logos/logo-desktop.svg" width="70" height="59">
+            <source type="image/svg+xml" media="(min-width:768px)" srcset="images/logos/logo-table.svg" width="60" height="50">
+            <img src="images/logos/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+          </picture>
+        </span>
+        <img class="main-header__logo logo__text" src="images/logos/logo-text-cat-energy.svg" width="101" height="18" alt="Cat Energy">
       </a>
       <nav class="main-nav" aria-label="Главное меню">
         <ul class="main-nav__list site-list" id="main-menu">
@@ -31,11 +42,18 @@
       </nav>
     </div>
   </header>
+
   <main class="main-container">
     <section class="hero">
       <h1 class="visually-hidden">Cat Energy — функциональное питание для котов</h1>
       <div class="hero__container">
-        <img class="hero__image" src="./images/" width="280" height="270" alt="product Cat Energy">
+        <div class="hero__image">
+          <picture>
+            <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/hero/cat-energy-desktop@1x.png 1x, images/hero/cat-energy-desktop@2x.png 2x">
+            <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/hero/cat-energy-table@1x.png 1x, images/hero/cat-energy-table@2x.png 2x">
+            <img src="images/hero/cat-energy-mobile@1x.png" srcset="images/hero/cat-energy-mobile@2x.png 2x" width="280" height="270" alt="Питание со вкусом курицы">
+          </picture>
+        </div>
         <p class="hero__description">занялся собой? займись котом!</p>
         <a class="hero__link button" href="#">подобрать программу</a>
       </div>
@@ -100,7 +118,16 @@
           </dl>
           <p class="example__cost">затраты на питание: <span class="example__price">15 000 РУБ.</span></p>
         </div>
-        <img class="example__image" src="../" width="280" height="256" alt="Толстый и худой кот">
+        <div class="example__image">
+          <picture>
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-diet/cat-fat-table:desktop@1x.png 1x, images/cat-diet/cat-fat-table:desktop@2x.png 2x">
+            <img src="images/cat-diet/cat-fat-before-mobile@1x.png" srcset="images/cat-diet/cat-fat-before-mobile@2x.png 2x" width="280" height="256" alt="Толстый кот">
+          </picture>
+          <picture>
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-diet/cat-slim-table:desktop@1x.png 1x, images/cat-diet/cat-slim-table:desktop@2x.png 2x">
+            <img src="images/cat-diet/cat-slim-mobile@1x.png" srcset="images/cat-diet/cat-slim-mobile@2x.png 2x" width="280" height="256" alt="Худой кот">
+          </picture>
+        </div>
         <div class="example__range-bar">
           <button class="example__range-toggle" type="button" aria-label="передвижение слайдера"></button>
           <svg width="40" height="40">
