@@ -1,0 +1,130 @@
+.main-footer {
+  position: relative;
+}
+
+.main-footer__contacts {
+  position: relative;
+  padding: 26px 0;
+  background-color: #f2f2f2;
+}
+
+.main-footer__contacts--index {
+  background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .main-footer__contacts {
+    padding: 60px 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-footer__contacts {
+    position: absolute;
+    top: 95px;
+    left: calc(50% - 610px);
+    padding: 0;
+    background-color: #ffffff;
+    z-index: 2;
+  }
+}
+
+.main-footer__map {
+  position: relative;
+}
+
+.main-footer__map-iframe {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: 0;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .main-footer__map-iframe {
+    height: 400px;
+  }
+}
+
+.main-footer__map-nojs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.main-footer__map-nojs img {
+  display: block;
+  width: 100%;
+  height: revert-layer;
+  object-fit: cover;
+}
+
+.main-footer__line {
+  display: flex;
+}
+
+.main-footer__links {
+  padding: 40px 0;
+  background-color: #f2f2f2;
+}
+
+@media (min-width: 768px) {
+  .main-footer__links {
+    padding: 57px 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-footer__links {
+    padding: 68px 0;
+  }
+}
+
+.main-footer__links .main-footer__wrapper {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .main-footer__links .main-footer__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+}
+
+.main-footer__logo {
+  display: inline-flex;
+  margin: auto;
+}
+
+.main-footer__logo:focus-visible {
+  outline: 2px solid #68b738;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .main-footer__logo {
+    margin-left: 0;
+  }
+}
+
+.main-footer__logo svg {
+  color: #111111;
+  transition: color 0.3s;
+}
+
+.main-footer__logo:hover svg {
+  color: #3e3e3e;
+}
+
+.main-footer__logo:focus-visible svg {
+  color: #3e3e3e;
+}
+
+.main-footer__logo:active svg {
+  color: #6b6b6b;
+}

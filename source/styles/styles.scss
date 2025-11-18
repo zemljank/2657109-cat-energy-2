@@ -1,49 +1,38 @@
-/* GLOBAL */
-@import "./common/variables.scss";
-@import "./common/global.scss";
-@import "./common/fonts.scss";
+@charset "UTF-8";
+@import "./common/variables";
+@import "./common/mixins";
+@import "./common/fonts";
+@import "./common/global";
+@import "./common/visually-hidden";
+@import "./blocks/page";
+@import "./blocks/main-container";
+@import "./blocks/main-header";
+@import "./blocks/main-nav";
+@import "./blocks/logo";
+@import "./blocks/link";
 
-/* BLOCKS */
-@import "./blocks/header.scss";
+/* ==== INDEX ==== */
+@import "./blocks/hero";
+@import "./blocks/programs";
+@import "./blocks/guide";
+@import "./blocks/parameters";
+@import "./blocks/example";
+@import "./blocks/result";
 
-/* FONTS */
+/* ==== CATALOG ==== */
+@import "./blocks/catalog-card";
+@import "./blocks/catalog";
+@import "./blocks/card-more";
+@import "./blocks/additional-product";
+@import "./blocks/additional-list";
+@import "./blocks/additional-card";
+@import "./blocks/banner";
+@import "./blocks/product";
+@import "./blocks/subscription";
+@import "./blocks/map";
 
-/* Lato Regular (400) */
-@font-face {
-  font-family: "Lato";
-  src:
-    url("../fonts/lato/Lato-Regular.woff2") format("woff2"),
-    url("../fonts/lato/Lato-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Oswald Regular (400) */
-@font-face {
-  font-family: "Oswald";
-  src:
-    url("../fonts/oswald/oswaldregular.woff2") format("woff2"),
-    url("../fonts/oswald/oswaldregular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+/* ==== CONTACTS + FOOTER ==== */
+@import "./blocks/contacts";
+@import "./blocks/main-footer";
+@import "./blocks/social-list";
+@import "./blocks/logo-academy";

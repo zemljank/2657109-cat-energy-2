@@ -1,0 +1,53 @@
+.logo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo:focus-visible {
+  outline: 2px solid #68b738;
+  outline-offset: 2px;
+}
+
+.logo:active {
+  opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    grid-template-columns: 60px 1fr;
+    gap: 13px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .logo {
+    grid-template-columns: 70px 1fr;
+    gap: 14px;
+  }
+}
+
+.example__button svg,
+.example__image img,
+.hero__image img,
+.logo__image img {
+  display: block;
+}
+
+.logo__text {
+  justify-self: center;
+  margin-top: 3px;
+}
+
+@media (min-width: 1440px) {
+  .logo__text {
+    width: 118px;
+    height: 21px;
+  }
+}
+

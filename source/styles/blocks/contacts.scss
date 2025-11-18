@@ -1,0 +1,57 @@
+.contacts-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+@media (min-width: 1440px) {
+  .contacts-info {
+    gap: 85px;
+    padding: 60px 40px;
+  }
+}
+
+.contacts-info__welcome {
+  max-width: 160px;
+  margin: 0;
+  font-family: "Oswald", "Impact", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+@media (min-width: 768px) {
+  .contacts-info__welcome {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.contacts-info__address {
+  max-width: 160px;
+  margin-left: auto;
+  font-style: normal;
+  line-height: 20px;
+  color: #444444;
+}
+
+@media (min-width: 768px) {
+  .contacts-info__address {
+    text-align: right;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .contacts-info__address {
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .contacts-info__address .street {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
