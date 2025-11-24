@@ -78,4 +78,3 @@ if (slider && range && before && after) {
 
   updateSlider(50);
 }
-

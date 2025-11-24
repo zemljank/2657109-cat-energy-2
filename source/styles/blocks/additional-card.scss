@@ -1,28 +1,20 @@
-/* ------------------- */
-/* ADDITIONAL-CARD     */
-/* ------------------- */
-
 .additional-card {
   display: grid;
   grid-template-columns: 1fr;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .additional-card {
     grid-template-columns: 1fr 244px;
     gap: 40px;
   }
 }
 
-/* INFO BLOCK */
-
 .additional-card__info {
-  /* MOBILE */
   display: block;
-  //margin-bottom: 15px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .additional-card__info {
     display: flex;
     justify-content: space-between;
@@ -31,7 +23,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .additional-card__info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -41,8 +33,6 @@
   }
 }
 
-/* TITLE */
-
 .additional-card__title {
   margin-bottom: 13px;
   text-transform: uppercase;
@@ -50,14 +40,12 @@
   line-height: 16px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .additional-card__title {
     margin-bottom: 0;
     line-height: 20px;
   }
 }
-
-/* PARAMETERS */
 
 .additional-card__parameters {
   flex-direction: row;
@@ -72,13 +60,13 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .additional-card__parameters {
     margin-bottom: 0;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .additional-card__parameters {
     display: grid;
     grid-template-columns: 75% 20%;
@@ -86,10 +74,7 @@
   }
 }
 
-/* BUTTONS + LIST */
-
-.additional-card__buttons,
-.additional-list {
+.additional-card__buttons {
   display: flex;
   flex-direction: column;
 }

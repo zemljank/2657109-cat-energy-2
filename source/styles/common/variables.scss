@@ -1,45 +1,25 @@
-/* здесь используйте глобальные переменные */
-:root {
-  /* spacing */
-  --padding-offset: 20px;
-  --padding-wrapper-offset: 0px;
+/* === ГЛОБАЛЬНЫЕ SCSS-ПЕРЕМЕННЫЕ === */
 
-  /* colors */
-  --color-brand: #68b738;
-  --color-text: #111111;
-  --color-text-muted: #6b7280;
-  --color-bg: #ffffff;
-  --color-surface: #f7f8f9;
-  --color-border: #e5e7eb;
+$color-text: #000000;
+$color-text-muted: #6b7280;
+$color-bg: #ffffff;
+$color-surface: #f7f8f9;
+$color-border: #e6e6e6;
+$color-brand: #68b738;
 
-  /* typography */
-  --font-primary: "Oswald", "Arial", sans-serif;
-  --font-secondary: "Lato", "Arial", sans-serif;
-}
-
-
-// Цвета
-$basic-white:#ffffff;
+$basic-white: #ffffff;
 $basic-gray: #f2f2f2;
-$basic-text-color: #444444;
-$basic-text-color-2: #222222;
 $basic-black: #000000;
-$accent-color: #68b73b;
 $live-example-color: #eaeaea;
 
-
-// Шрифты
-
-//$primary-font: "oswald", sans-serif;
-//$secondary-font: "Lato", sans-serif;
-
-
-$primary-font: "oswald", "arial", sans-serif;
-$secondary-font: "Lato", "arial", sans-serif;
-
-
-// Размеры
-
+$font-primary: "Oswald", "Arial", sans-serif;
+$font-secondary: "Lato", "Arial", sans-serif;
 
 $tablet-width: 768px;
 $desktop-width: 1440px;
+
+$gutter: 20px;
+
+$padding-offset: 20px;
+$padding-offset-tablet: 30px;
+$padding-offset-desktop: 40px;

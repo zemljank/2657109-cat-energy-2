@@ -1,5 +1,5 @@
 .link {
-  font-family: "Oswald", "Impact", sans-serif;
+  font-family: $font-primary;
   color: #000000;
 }
 
@@ -37,7 +37,7 @@
   mask-size: contain;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .link--arrow::after {
     margin-left: 10px;
   }

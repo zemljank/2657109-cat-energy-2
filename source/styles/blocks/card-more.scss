@@ -18,7 +18,7 @@
   mask-size: contain;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .card-more::before {
     width: 60px;
     height: 60px;
@@ -27,13 +27,13 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .card-more::before {
     margin-bottom: 40px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .card-more {
     padding: 50px 38px 38px;
     border: 2px solid #f2f2f2;
@@ -45,7 +45,7 @@
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .card-more__info {
     max-width: 170px;
   }
@@ -57,13 +57,13 @@
   color: #111111;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .card-more__title {
     margin-bottom: 24px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .card-more__title {
     margin-bottom: 26px;
   }
@@ -76,7 +76,7 @@
   color: #444444;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .card-more__description {
     font-size: 16px;
     line-height: 18px;
@@ -89,7 +89,7 @@
   align-self: stretch;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .card-more__buttons {
     margin-top: auto;
   }

@@ -1,39 +1,6 @@
-/* здесь используйте глобальные селекторы img, body, html и так далее */
+/* Глобальные селекторы: html, body, img, a */
 @charset "UTF-8";
 
-/* ===== CSS-переменные (mobile-first) ===== */
-:root {
-  /* ширина контейнера и «гаттеры» */
-  --container-max: 1300px;
-  --gutter-m: 20px; /* мобайл */
-  --gutter-t: 30px; /* планшет */
-  --gutter-d: 110px; /* десктоп */
-  --gutter: var(--gutter-m);
-
-  /* общие отступы секций/внутренние поля */
-  --padding-offset: 20px;
-  --padding-wrapper-offset: 0px;
-
-  /* цвета/типографика (при желании дополни) */
-  --color-text: #000000;
-  --color-text-muted: #6b7280;
-  --color-bg: #ffffff;
-  --color-border: #e6e6e6;
-}
-
-@media (min-width: 768px) {
-  :root {
-    --gutter: var(--gutter-t);
-  }
-}
-
-@media (min-width: 1440px) {
-  :root {
-    --gutter: var(--gutter-d);
-  }
-}
-
-/* ===== Базовые резеты ===== */
 *,
 *::before,
 *::after {
@@ -48,11 +15,14 @@ html {
 body {
   min-height: 100%;
   margin: 0;
-  color: var(--color-text);
-  background: var(--color-bg);
-  font-family: "Lato", "Arial", sans-serif;
+
+  color: $color-text;
+  background-color: $color-bg;
+
+  font-family: $font-primary;
   font-size: 14px;
   line-height: 18px;
+
   text-rendering: optimizeLegibility;
 }
 
@@ -61,13 +31,6 @@ img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
-}
-
-.example__button svg,
-.example__image img,
-.hero__image img,
-.logo__image img {
-  display: block;
 }
 
 a {
@@ -79,238 +42,23 @@ a:hover {
   text-decoration: none;
 }
 
-p {
-  font-size: 14px;
-  line-height: 18px;
-}
-
-@media (min-width: 768px) {
-  p {
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
-
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .container {
-  padding: 0 var(--padding-offset);
   margin: 0 auto;
   width: 100%;
+  padding: 0 $padding-offset;
   max-width: 768px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .container {
-    --padding-offset: 30px;
+    padding: 0 $padding-offset-tablet;
     max-width: 1440px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .container {
-    --padding-offset: 40px;
+    padding: 0 $padding-offset-desktop;
     max-width: 1300px;
-  }
-}
-
-/* ===== Утилиты ===== */
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.title {
-  margin: 0;
-  font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
-  color: #000000;
-}
-
-.title--large {
-  font-size: 36px;
-  line-height: 40px;
-}
-
-@media (min-width: 768px) {
-  .title--large {
-    font-size: 60px;
-    line-height: 60px;
-  }
-}
-
-.title--medium {
-  font-size: 24px;
-  line-height: 24px;
-}
-
-@media (min-width: 768px) {
-  .title--medium {
-    font-size: 32px;
-    line-height: 36px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .title--medium {
-    font-size: 40px;
-    line-height: 40px;
-  }
-}
-
-.title--small {
-  font-size: 16px;
-  line-height: 20px;
-}
-
-@media (min-width: 768px) {
-  .title--small {
-    font-size: 20px;
-    line-height: 24px;
-  }
-}
-
-.title--line::after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  width: 100vw;
-  height: 2px;
-  background-color: #68b738;
-  transform: translateY(-50%);
-  left: calc(100% + var(--padding-offset));
-}
-
-.title--line {
-  position: relative;
-  display: inline-block;
-}
-
-.title--line span::after {
-  content: "\a";
-  white-space: pre;
-}
-
-@media (min-width: 768px) {
-  .title--line span::after {
-    white-space: inherit;
-  }
-}
-
-.title--line::after,
-.title--line::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  width: 100vw;
-  height: 2px;
-  background-color: #68b738;
-  transform: translateY(-50%);
-}
-
-
-@media (min-width: 768px) {
-  .title--line::after,
-  .title--line::before {
-    top: 23px;
-  }
-}
-
-.title--line::before {
-  right: calc(100% + var(--padding-offset));
-}
-
-@media (min-width: 768px) {
-  .title--line::before {
-    right: calc(100% + var(--padding-wrapper-offset));
-  }
-}
-
-@media (min-width: 1440px) {
-  .title--line::before {
-    right: calc(100% + var(--padding-offset));
-  }
-}
-
-@media (min-width: 768px) {
-  .title--line::after {
-    left: calc(100% + var(--padding-wrapper-offset));
-  }
-}
-
-@media (min-width: 1440px) {
-  .title--line::after {
-    left: calc(100% + var(--padding-offset));
-  }
-}
-
-.button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 20px;
-  border: 0;
-  text-transform: uppercase;
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  color: #ffffff;
-  background: #68b738;
-  cursor: pointer;
-}
-
-.button:focus-visible {
-  outline: 2px solid #68b738;
-  outline-offset: 2px;
-}
-
-.button--primary {
-  background-color: #68b738;
-}
-
-.button--primary:active,
-.button--primary:focus-visible,
-.button--primary:hover {
-  background-color: #5eaa2f;
-}
-
-.button--primary:active {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.button--primary:disabled {
-  opacity: 0.3;
-}
-
-.button--secondary {
-  background-color: #f2f2f2;
-  color: #444444;
-}
-
-.button--secondary:active,
-.button--secondary:focus-visible,
-.button--secondary:hover {
-  background-color: #eaeaea;
-}
-
-@media (min-width: 768px) {
-  .button {
-    padding: 10px 26px;
-    font-size: 16px;
-    line-height: 20px;
   }
 }

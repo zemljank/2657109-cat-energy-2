@@ -3,7 +3,7 @@
   background-color: #eaeaea;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .example::before {
     content: "";
     display: block;
@@ -14,20 +14,20 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .example::before {
     display: none;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .example {
     padding: 0 0 100px;
     background: linear-gradient(to bottom, #ffffff 620px, #eaeaea 620px);
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .example {
     padding: 0 0 74px;
     background: linear-gradient(to bottom, #ffffff 136px, #eaeaea 136px);
@@ -41,7 +41,7 @@
   justify-content: space-between;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .example__wrapper {
     flex-direction: row;
     align-items: flex-start;
@@ -52,13 +52,13 @@
   margin-bottom: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .example__text {
     margin-bottom: 104px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .example__text {
     max-width: 436px;
     margin-bottom: 0;
@@ -69,13 +69,13 @@
   margin-bottom: 40px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .example__title {
     margin-bottom: 60px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .example__title {
     margin-bottom: 76px;
   }
@@ -83,9 +83,10 @@
 
 .example__description {
   color: #444444;
+  font-family: $font-secondary;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .example__description {
     padding-top: 70px;
   }
@@ -98,7 +99,7 @@
   margin-top: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .example__info {
     flex-direction: row;
     justify-content: space-between;
@@ -107,7 +108,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .example__info {
     flex-direction: column;
     align-items: flex-start;
@@ -118,13 +119,13 @@
 
 .example__summary {
   margin: 0;
-  font-family: "Oswald", "Impact", sans-serif;
+  font-family: $font-primary;
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .example__summary {
     display: flex;
     flex-direction: column;
@@ -135,7 +136,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .example__summary {
     flex-direction: row;
     align-items: center;
@@ -160,10 +161,14 @@
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .example__slider {
     max-width: 560px;
   }
+}
+
+.example__image img {
+  display: block;
 }
 
 .example__image--before {
@@ -226,6 +231,7 @@
   fill: currentColor;
   transition: fill 0.3s;
   stroke: none;
+  display: block;
 }
 
 .example__range:hover::before {

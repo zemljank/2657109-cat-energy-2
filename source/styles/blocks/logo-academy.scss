@@ -1,4 +1,5 @@
 .logo-academy {
+  font-family: $font-secondary;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
@@ -9,10 +10,9 @@
   color: #444444;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .logo-academy {
-    width: fit-content;
-    margin-left: auto;
+    justify-content: end;
   }
 }
 
@@ -29,7 +29,7 @@
   background-color: currentColor;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .logo-academy::after {
     margin-left: 23px;
   }
@@ -49,4 +49,3 @@
   outline: 2px solid #68b738;
   outline-offset: 2px;
 }
-

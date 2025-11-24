@@ -1,5 +1,5 @@
 .main-nav {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $font-primary;
   font-size: 20px;
   line-height: 20px;
   font-weight: 400;
@@ -12,13 +12,13 @@
   align-items: stretch;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .main-nav {
     padding-top: 5px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .main-nav {
     max-width: 610px;
   }
@@ -34,7 +34,7 @@
   text-decoration: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .main-nav__list {
     flex-direction: row;
     justify-content: flex-end;
@@ -42,7 +42,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .main-nav__list {
     gap: 17px 34px;
   }
@@ -66,7 +66,7 @@
   background-color: #e6e6e6;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .main-nav__item::before,
   .main-nav__item:last-of-type::after {
     content: none;
@@ -86,13 +86,13 @@
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .main-nav__item {
     padding: 0;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .main-nav__item--white .main-nav__link::after {
     background-color: #ffffff;
   }
@@ -106,14 +106,14 @@
   text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .main-nav__link {
     font-size: 18px;
     line-height: 24px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .main-nav__link::after {
     content: "";
     position: absolute;
@@ -126,7 +126,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .main-nav__link {
     font-size: 20px;
     line-height: 24px;
@@ -137,7 +137,7 @@
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .main-nav--closed {
     display: flex;
   }
@@ -152,7 +152,7 @@
   z-index: 2;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .main-nav--opened {
     position: relative;
     background-color: transparent;
@@ -160,11 +160,8 @@
 }
 
 .main-nav--nojs .main-nav__item::before {
-  /* stylelint-disable-next-line no-unknown-custom-properties */
-  left: calc(0px - var(--gutter));
-
-  /* stylelint-disable-next-line no-unknown-custom-properties */
-  width: calc(100% + var(--gutter) * 2);
+  left: calc(0px - $gutter);
+  width: calc(100% + $gutter * 2);
 }
 
 .main-nav--nojs {
