@@ -1,1 +1,25 @@
-/* здесь используйте глобальные переменные */
+/* === ГЛОБАЛЬНЫЕ SCSS-ПЕРЕМЕННЫЕ === */
+
+$color-text: #000000;
+$color-text-muted: #6b7280;
+$color-bg: #ffffff;
+$color-surface: #f7f8f9;
+$color-border: #e6e6e6;
+$color-brand: #68b738;
+
+$basic-white: #ffffff;
+$basic-gray: #f2f2f2;
+$basic-black: #000000;
+$live-example-color: #eaeaea;
+
+$font-primary: "Oswald", "Arial", sans-serif;
+$font-secondary: "Lato", "Arial", sans-serif;
+
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+$gutter: 20px;
+
+$padding-offset: 20px;
+$padding-offset-tablet: 30px;
+$padding-offset-desktop: 40px;

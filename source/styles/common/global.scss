@@ -1,1 +1,43 @@
-/* здесь используйте глобальные селекторы img, body, html и так далее */
+/* Глобальные селекторы: html, body, img, a */
+@charset "UTF-8";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+
+  color: $color-text;
+  background-color: $color-bg;
+
+  font-family: $font-primary;
+  font-size: 14px;
+  line-height: 18px;
+
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}

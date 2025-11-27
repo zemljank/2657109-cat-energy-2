@@ -1,0 +1,116 @@
+.title {
+  margin: 0;
+  font-family: $font-primary;
+  font-weight: 400;
+  color: #000000;
+}
+
+.title--large {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .title--large {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.title--medium {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .title--medium {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title--medium {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.title--small {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .title--small {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.title--line {
+  position: relative;
+  display: inline-block;
+}
+
+.title--line::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  width: 100vw;
+  height: 2px;
+  background-color: #68b738;
+  transform: translateY(-50%);
+  left: calc(100% + $padding-offset);
+}
+
+.title--line::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  width: 100vw;
+  height: 2px;
+  background-color: #68b738;
+  transform: translateY(-50%);
+  right: calc(100% + $padding-offset);
+}
+
+@media (min-width: $tablet-width) {
+  .title--line::after,
+  .title--line::before {
+    top: 23px;
+  }
+
+  .title--line::after {
+    left: calc(100% + $padding-offset-tablet);
+  }
+
+  .title--line::before {
+    right: calc(100% + $padding-offset-tablet);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title--line::after {
+    left: calc(100% + $padding-offset-desktop);
+  }
+
+  .title--line::before {
+    right: calc(100% + $padding-offset-desktop);
+  }
+}
+
+.title-description {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  font-family: $font-secondary;
+}
+
+@media (min-width: $tablet-width) {
+  .title-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

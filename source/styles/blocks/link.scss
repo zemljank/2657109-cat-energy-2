@@ -1,0 +1,44 @@
+.link {
+  font-family: $font-primary;
+  color: #000000;
+}
+
+.link:hover {
+  opacity: 0.6;
+}
+
+.link:focus-visible {
+  outline: 2px solid #68b738;
+  outline-offset: 2px;
+}
+
+.link--arrow:active,
+.link:active {
+  opacity: 0.3;
+}
+
+.link--arrow {
+  gap: 15px;
+}
+
+.link--arrow:active::after,
+.link--arrow:focus-visible::after,
+.link--arrow:hover::after {
+  mask-position: 0;
+}
+
+.link--arrow::after {
+  content: "";
+  width: 32px;
+  height: 13px;
+  background-color: #000000;
+  mask-image: url("../../icons/arrow.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+@media (min-width: $tablet-width) {
+  .link--arrow::after {
+    margin-left: 10px;
+  }
+}
