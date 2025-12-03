@@ -16,7 +16,6 @@
   }
 }
 
-.catalog-card__image img,
 .social-list__link {
   display: block;
 }
@@ -59,8 +58,4 @@
 .social-list__link:active::before {
   background-color: #68b738;
   opacity: 0.3;
-}
-
-.social-list__link:focus::before {
-  background-color: #68b738;
 }

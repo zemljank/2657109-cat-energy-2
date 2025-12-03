@@ -1,10 +1,7 @@
 .link {
   font-family: $font-primary;
   color: #000000;
-}
-
-.link:hover {
-  opacity: 1;
+  text-decoration: none;
 }
 
 .link:focus-visible {

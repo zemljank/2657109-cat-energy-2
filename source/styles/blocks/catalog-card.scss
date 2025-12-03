@@ -39,18 +39,16 @@
   }
 }
 
+.catalog-card__image img {
+  display: block;
+}
+
 .catalog-card__info {
   display: flex;
   flex-direction: column;
 }
 
 @media (min-width: $tablet-width) {
-  .catalog-card__info {
-    margin-bottom: 25px;
-  }
-}
-
-@media (min-width: $desktop-width) {
   .catalog-card__info {
     margin-bottom: 25px;
   }

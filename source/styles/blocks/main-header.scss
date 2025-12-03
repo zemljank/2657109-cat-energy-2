@@ -2,52 +2,36 @@
   position: relative;
   z-index: 2;
   background-color: #ffffff;
-}
 
-@media (min-width: $desktop-width) {
-  .main-header {
+  @media (min-width: $desktop-width) {
     width: 100%;
     background-color: transparent;
-    z-index: 2;
   }
+}
 
-  .main-header--index {
+.main-header--index {
+  @media (min-width: $desktop-width) {
     position: absolute;
     top: 55px;
   }
+}
 
-  .main-header--index .main-header__line {
+.main-header--index .main-header__line {
+  @media (min-width: $desktop-width) {
     padding: 0;
-  }
-
-  .main-header--index .main-nav__link {
-    color: #ffffff;
-  }
-
-  .main-header--index .main-nav__link:hover,
-  .main-header--index .main-nav__link:focus-visible {
-    color: rgba(255, 255, 255, 0.7);
-  }
-
-  .main-header--index .main-nav__item--current .main-nav__link {
-    border-color: #ffffff;
   }
 }
 
 .main-header__line {
   position: relative;
   padding: 13px 0 14px;
-}
 
-@media (min-width: $tablet-width) {
-  .main-header__line {
+  @media (min-width: $tablet-width) {
     align-self: flex-start;
     padding: 25px 0;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .main-header__line {
+  @media (min-width: $desktop-width) {
     padding: 55px 0;
   }
 }
@@ -63,10 +47,8 @@
   transform: translateY(-50%);
   background-color: #ffffff;
   cursor: pointer;
-}
 
-@media (min-width: $tablet-width) {
-  .main-header__toggle {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }
@@ -83,8 +65,8 @@
   background-image: url("../../icons/stack.svg#close-mobile");
 }
 
-@media (min-width: $tablet-width) {
-  .main-header__wrapper {
+.main-header__wrapper {
+  @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
