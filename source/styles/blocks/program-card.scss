@@ -87,7 +87,6 @@
   }
 }
 
-/* Котики */
 .program-card--slim::after,
 .program-card--pro::after {
   content: "";
@@ -98,7 +97,6 @@
   z-index: 2;
 }
 
-/* Slim */
 .program-card--slim::after {
   mask-image: url("/icons/cat-slim.svg");
   width: 36px;
@@ -121,7 +119,6 @@
   }
 }
 
-/* Pro */
 .program-card--pro::after {
   mask-image: url("/icons/cat-pro.svg");
   width: 67px;
@@ -173,7 +170,7 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
-    margin-top: 0;
+    margin-top: -3;
   }
 
   @media (min-width: $desktop-width) {
@@ -209,7 +206,7 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 
   @media (min-width: $desktop-width) {

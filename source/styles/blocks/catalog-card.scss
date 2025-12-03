@@ -15,7 +15,7 @@
 
 @media (min-width: $desktop-width) {
   .catalog-card {
-    padding: 0 38px 40px;
+    padding: 0 38px 39px;
   }
 }
 
@@ -50,6 +50,11 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .catalog-card__info {
+    margin-bottom: 25px;
+  }
+}
 
 .catalog-card__link {
   display: block;
@@ -71,7 +76,6 @@
     margin-bottom: 24px;
   }
 }
-
 
 .catalog-card__title {
   text-transform: uppercase;

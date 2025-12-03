@@ -7,6 +7,7 @@
   font-size: 12px;
   line-height: 16px;
   color: #444444;
+  font-family: $font-secondary;
 }
 
 @media (min-width: $tablet-width) {
@@ -31,9 +32,17 @@
 }
 
 @media (min-width: $desktop-width) {
+  .parameters__item {
+    margin-bottom: 6px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+@media (min-width: $desktop-width) {
   .parameters__item:last-of-type {
-    margin-bottom: 7px;
-    padding-bottom: 9px;
+    margin-bottom: 6px;
+    padding-bottom: 10px;
   }
 }
 
@@ -44,7 +53,7 @@
 
 @media (min-width: $tablet-width) {
   .parameters__description {
-    margin-left: 49px;
+    margin-left: 51px;
   }
 }
 

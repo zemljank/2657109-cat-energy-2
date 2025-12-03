@@ -25,6 +25,12 @@
 
 @media (min-width: $tablet-width) {
   .guide__title {
+    margin-bottom: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .guide__title {
     margin-bottom: 72px;
   }
 }
@@ -141,7 +147,6 @@
     margin-right: 0;
   }
 }
-
 
 .guide__item-text {
   grid-column: 2 / -1;

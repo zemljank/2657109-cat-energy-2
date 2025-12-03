@@ -5,6 +5,12 @@
 }
 
 @media (min-width: $desktop-width) {
+  .main-header {
+    width: 100%;
+    background-color: transparent;
+    z-index: 2;
+  }
+
   .main-header--index {
     position: absolute;
     top: 55px;
@@ -18,10 +24,13 @@
     color: #ffffff;
   }
 
-  .main-header {
-    width: 100%;
-    background-color: transparent;
-    z-index: 2;
+  .main-header--index .main-nav__link:hover,
+  .main-header--index .main-nav__link:focus-visible {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .main-header--index .main-nav__item--current .main-nav__link {
+    border-color: #ffffff;
   }
 }
 
@@ -72,13 +81,6 @@
 
 .main-header__toggle--opened {
   background-image: url("../../icons/stack.svg#close-mobile");
-}
-
-
-@media (min-width: $tablet-width) {
-  .main-header__toggle {
-    display: none;
-  }
 }
 
 @media (min-width: $tablet-width) {

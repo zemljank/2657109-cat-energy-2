@@ -4,13 +4,13 @@
 
 @media (min-width: $tablet-width) {
   .additional-product {
-    padding: 70px 0 75px;
+    padding: 71px 0 73px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .additional-product {
-    padding: 77px 0 87px;
+    padding: 76px 0 91px;
   }
 }
 
@@ -23,14 +23,14 @@
 
   position: relative;
   margin: 0 var(--padding-wrapper-offset, 0);
-  margin-bottom: 32px;
+  margin-bottom: 35px;
   line-height: 24px;
 }
 
 @media (min-width: $tablet-width) {
   .additional-product__title {
     --padding-wrapper-offset: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 78px;
     line-height: 36px;
   }
 }
@@ -38,6 +38,7 @@
 @media (min-width: $desktop-width) {
   .additional-product__title {
     --padding-wrapper-offset: 0;
+    margin-bottom: 82px;
   }
 }
 

@@ -31,11 +31,18 @@
 
 .main-footer__map {
   position: relative;
+  min-height: 362px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer__map {
+    min-height: 400px;
+  }
 }
 
 .main-footer__map-iframe {
   position: relative;
-  display: block;
+  display: none;
   width: 100%;
   border: 0;
   z-index: 1;
@@ -47,12 +54,17 @@
   }
 }
 
+.js .main-footer__map-iframe {
+  display: block;
+}
+
 .main-footer__map-nojs {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   width: 100%;
+  display: block;
   z-index: 1;
 }
 
@@ -61,6 +73,10 @@
   width: 100%;
   height: revert-layer;
   object-fit: cover;
+}
+
+.js .main-footer__map-nojs {
+  display: none;
 }
 
 .main-footer__links {
@@ -101,18 +117,13 @@
 @media (min-width: $tablet-width) {
   .main-footer__logo {
     justify-content: start;
+    margin-top: 4px;
   }
 }
 
 .main-footer__logo:focus-visible {
   outline: 2px solid #68b738;
   outline-offset: 2px;
-}
-
-@media (min-width: $tablet-width) {
-  .main-footer__logo {
-    margin-left: 0;
-  }
 }
 
 .main-footer__logo svg {
@@ -130,4 +141,14 @@
 
 .main-footer__logo:active svg {
   color: #6b6b6b;
+}
+
+.main-footer__logo-academy {
+  margin-top: 5px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer__logo-academy {
+    margin-top: 0;
+  }
 }

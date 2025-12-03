@@ -4,7 +4,7 @@
 }
 
 .link:hover {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .link:focus-visible {
@@ -12,19 +12,10 @@
   outline-offset: 2px;
 }
 
-.link--arrow:active,
-.link:active {
-  opacity: 0.3;
-}
-
 .link--arrow {
+  display: inline-flex;
+  align-items: center;
   gap: 15px;
-}
-
-.link--arrow:active::after,
-.link--arrow:focus-visible::after,
-.link--arrow:hover::after {
-  mask-position: 0;
 }
 
 .link--arrow::after {
@@ -35,6 +26,19 @@
   mask-image: url("../../icons/arrow.svg");
   mask-repeat: no-repeat;
   mask-size: contain;
+}
+
+.link--arrow:hover::after,
+.link--arrow:focus-visible::after {
+  mask-image: url("../../icons/arrow-big.svg");
+}
+
+.link--arrow:active {
+  opacity: 0.3;
+}
+
+.link--arrow:active::after {
+  mask-image: url("../../icons/arrow-big.svg");
 }
 
 @media (min-width: $tablet-width) {

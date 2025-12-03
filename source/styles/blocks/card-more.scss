@@ -35,7 +35,14 @@
 
 @media (min-width: $tablet-width) {
   .card-more {
-    padding: 50px 38px 38px;
+    padding: 50px 35px 38px;
+    border: 2px solid #f2f2f2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .card-more {
+    padding: 50px 37px 35px;
     border: 2px solid #f2f2f2;
   }
 }
@@ -74,6 +81,7 @@
   font-size: 12px;
   line-height: 16px;
   color: #444444;
+  font-family: $font-secondary;
 }
 
 @media (min-width: $tablet-width) {

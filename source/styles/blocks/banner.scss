@@ -1,6 +1,16 @@
 .banner {
-  padding: 58px 61px 44px 58px;
-  background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set(url("../../images/cat-backpack@1x.webp") type("image/webp") 1x, url("../../images/cat-backpack@2x.webp") type("image/webp") 2x, url("../../images/cat-backpack@1x.jpg") type("image/jpg") 1x, url("../../images/cat-backpack@2x.jpg") type("image/jpg") 2x);
+  padding: 58px 59px 42px;
+  background:
+    linear-gradient(
+      rgba(104, 183, 56, 0.85),
+      rgba(104, 183, 56, 0.85)
+    ),
+    image-set(
+      url("../../images/cat-backpack@1x.webp") type("image/webp") 1x,
+      url("../../images/cat-backpack@2x.webp") type("image/webp") 2x,
+      url("../../images/cat-backpack@1x.jpg") type("image/jpeg") 1x,
+      url("../../images/cat-backpack@2x.jpg") type("image/jpeg") 2x
+    );
   background-position: 100% 60%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,14 +19,19 @@
 @media (min-width: $tablet-width) {
   .banner {
     min-height: 200px;
-    padding: 60px 125px 60px 78px;
+    padding: 58px 125px 78px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .banner {
-    padding: 56px 42px 42px;
+    padding: 56px 41px 43px 43px;
   }
+}
+
+.banner__wrapper {
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: $tablet-width) {
@@ -38,9 +53,10 @@
   position: relative;
   display: block;
   width: 80px;
-  height: 80px;
+  height: 82.5px;
   margin: 0 auto 48px;
   background-color: #ffffff;
+
   mask-image: url("../../icons/gift.svg");
   mask-position: center;
   mask-repeat: no-repeat;
@@ -55,15 +71,16 @@
 
 @media (min-width: $desktop-width) {
   .banner__wrapper::before {
-    margin: 0 auto auto;
+    margin: 2px auto auto;
   }
 }
 
 .banner__text {
+  font-family: $font-secondary;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
   color: #ffffff;
+  text-align: center;
 }
 
 .banner__text:last-of-type {

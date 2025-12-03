@@ -56,12 +56,12 @@
 .title--line::after {
   content: "";
   position: absolute;
-  top: 15px;
+  top: 11px;
   width: 100vw;
   height: 2px;
   background-color: #68b738;
   transform: translateY(-50%);
-  left: calc(100% + $padding-offset);
+  left: calc(100% + 40px);
 }
 
 .title--line::before {
@@ -78,15 +78,15 @@
 @media (min-width: $tablet-width) {
   .title--line::after,
   .title--line::before {
-    top: 23px;
+    top: 17px;
   }
 
   .title--line::after {
-    left: calc(100% + $padding-offset-tablet);
+    left: calc(100% + 40px);
   }
 
   .title--line::before {
-    right: calc(100% + $padding-offset-tablet);
+    right: calc(100% + 40px);
   }
 }
 

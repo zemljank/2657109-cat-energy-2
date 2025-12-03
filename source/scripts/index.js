@@ -1,7 +1,8 @@
+
+document.documentElement.classList.add('js');
 document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.main-nav');
   const toggle = document.querySelector('.main-header__toggle');
-  const footerMap = document.querySelector('.main-footer__map-nojs');
   const menuLinks = document.querySelectorAll('.main-nav__link');
 
   if (!nav || !toggle) {
@@ -35,12 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
       toggle.classList.remove('main-header__toggle--opened');
     });
   });
-
-  if (footerMap) {
-    footerMap.style.zIndex = '0';
-  }
 });
-
 
 const slider = document.querySelector('.example__slider');
 const range = document.querySelector('.example__range');
